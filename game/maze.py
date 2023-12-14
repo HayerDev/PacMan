@@ -3,19 +3,19 @@ import pygame
 class Maze:
     def __init__(self):
         self.layout = [
-            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "X            X           X             X",
-            "X XXXX XXXX XXX XXXX XXXX XXXX XXXX XX X",
-            "X X  X X  X X   X  X X   X X  X X  X X X",
-            "X XXXX XXXX XXX XXXX XXXX X XXXX XXXX X",
-            "X        X       X        X           X",
-            "X XXXX XXXX X XXXXXX X XXXX XXXXXX XXXX",
-            "X   XX X    X       X X    X X       XX",
-            "XXX XX XXXX XXXXXX   XXXXXX X XXXXXXXXX",
-            "X      X    X       X X    X X        X",
-            "X XXXXXX XX XXXX X X XXXXXX X XXXXXXX X",
-            "X        X      X X       X X        X",
-            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+            "XXXXXXXXXXXXXXXX",
+            "X      X       X",
+            "X XXXX XXX XXX X",
+            "X X  X X   X X X",
+            "X XXXX XXX XXX X",
+            "X    X     X   X",
+            "X XXXX X XXXX XX",
+            "X X    X X    XX",
+            "X XXXX XXX XXXXX",
+            "X    X     X   X",
+            "X XXXX X XXXXXX X",
+            "X              X",
+            "XXXXXXXXXXXXXXXX"
         ]
 
     def draw(self, screen):

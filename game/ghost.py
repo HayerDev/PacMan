@@ -7,11 +7,11 @@ class Ghost:
         # load the appropriate icon based off ghost typoe
         self.original_image = pygame.image.load(f'./icons/{self.type}.png')
         self.image = pygame.transform.scale(self.original_image, (26, 26))
-        self.rect = self.image.get_rect(topleft=self.find_random_position())
         self.maze = maze
         self.speed = 2
         self.direction = random.choice([pygame.Vector2(1, 0), pygame.Vector2(-1, 0),
                                         pygame.Vector2(0, 1), pygame.Vector2(0, -1)])
+        self.rect = self.image.get_rect(topleft=self.find_random_position())
 
     def find_random_position(self):
         while True:
