@@ -11,10 +11,10 @@ class Game:
         self.running = True
         self.maze = Maze()
         self.player = Player()
-        self.ghosts = [Ghost('blinky', (100, 100), self.maze),
-                       Ghost('pinky', (200, 100), self.maze),
-                       Ghost('inky', (300, 100), self.maze),
-                       Ghost('clyde', (400, 100), self.maze)
+        self.ghosts = [Ghost('blinky',  self.maze),
+                       Ghost('pinky',  self.maze),
+                       Ghost('inky',  self.maze),
+                       Ghost('clyde',  self.maze)
                       ]
 
     def run(self):
