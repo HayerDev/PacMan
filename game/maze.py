@@ -4,17 +4,17 @@ class Maze:
     def __init__(self):
         self.layout = [
             "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "X             x            x            X",
-            "X XXXX XXXX XXXX XXXX XXXXXXXX XXXX XX X",
-            "X X  X X  X X  X X  X X      X X  X X X",
-            "X XXXX XXXX XXXX XXXX XXXXXX X XXXX X X",
-            "X        X        X         X        X",
-            "X XXXX XXXXXX X XXXXXX X XXXX XXXXXX XX",
-            "X   XX X      X      X X    X X      XX",
-            "XXX XX XXXXXX XXXXXX   XXXXXX X XXXXXX",
-            "X      X    X      X X X    X X      X",
-            "X XXXXXX XX XXXX X X XXXXXX X XXXXXX X",
-            "X        X      X X      X X X      X",
+            "X            X           X             X",
+            "X XXXX XXXX XXX XXXX XXXX XXXX XXXX XX X",
+            "X X  X X  X X   X  X X   X X  X X  X X X",
+            "X XXXX XXXX XXX XXXX XXXX X XXXX XXXX X",
+            "X        X       X        X           X",
+            "X XXXX XXXX X XXXXXX X XXXX XXXXXX XXXX",
+            "X   XX X    X       X X    X X       XX",
+            "XXX XX XXXX XXXXXX   XXXXXX X XXXXXXXXX",
+            "X      X    X       X X    X X        X",
+            "X XXXXXX XX XXXX X X XXXXXX X XXXXXXX X",
+            "X        X      X X       X X        X",
             "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
         ]
 

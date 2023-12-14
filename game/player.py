@@ -3,8 +3,8 @@ class Player:
     def __init__(self):
         # Initialize player properties
         self.original_image = pygame.image.load('./icons/Pacman.png')
-        self.image = pygame.transform.scale(self.original_image, (32, 32))
-        self.rect = self.image.get_rect()
+        self.image = pygame.transform.scale(self.original_image, (26, 26))
+        self.rect = self.image.get_rect(topleft=(35,35))
         self.speed = 3
         self.direction = pygame.Vector2(0, 0)
 
@@ -36,7 +36,7 @@ class Player:
         #look at each cell
         for y, row in enumerate(maze.layout):
             for x, cell in enumerate(row):
-                if cell == 1:
+                if cell == 'X':
                     wall_rect = pygame.Rect(x * 32, y * 32, 32, 32)
                     #movements wall hits
                     if self.rect.colliderect(wall_rect):

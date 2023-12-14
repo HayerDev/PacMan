@@ -6,7 +6,7 @@ from game.maze import Maze
 class Game:
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode((800, 800))  # Adjust as needed
+        self.screen = pygame.display.set_mode((800, 600))  # Adjust as needed
         self.clock = pygame.time.Clock()
         self.running = True
         self.maze = Maze()
