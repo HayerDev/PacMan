@@ -7,6 +7,11 @@ class Game:
     def __init__(self):
         pygame.init()
         self.screen = pygame.display.set_mode((800, 600))  # Adjust as needed
+        pygame.mixer.init()
+        self.background_music = pygame.mixer.music.load('sound/retroarcadeTrimmed.mp3')
+        self.eat_sound = pygame.mixer.Sound('sound/pacmanEatingTrimmed.mp3')
+        # Loop background theme forever, but you'll probably lose before then!
+        pygame.mixer.music.play(-1)
         self.clock = pygame.time.Clock()
         self.running = True
         self.maze = Maze()
@@ -48,6 +53,7 @@ class Game:
         for dot in self.maze.dots[:]:
             if self.player.rect.colliderect(dot):
                 self.maze.dots.remove(dot)
+                self.eat_sound.play()
                 self.score += 1
 
 
