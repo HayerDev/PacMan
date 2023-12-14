@@ -6,7 +6,8 @@ from game.maze import Maze
 class Game:
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode((800, 600)) # ADjust as needed
+        #optimal screen size:maze layout
+        self.screen = pygame.display.set_mode((800, 600))
         pygame.mixer.init()
         self.background_music = pygame.mixer.music.load('sound/retroarcadeTrimmed.mp3')
         self.eat_sound = pygame.mixer.Sound('sound/pacmanEatingTrimmed.mp3')
@@ -99,6 +100,7 @@ class Game:
 
     def reset_game(self):
         self.player = Player()
+        self.maze = Maze()
         self.ghosts = [Ghost('blinky', self.maze),
                        Ghost('pinky', self.maze),
                        Ghost('inky', self.maze),

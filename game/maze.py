@@ -3,19 +3,19 @@ import pygame
 class Maze:
     def __init__(self):
         self.layout = [
-            "XXXXXXXXXXXXXXXX",
-            "X      X       X",
-            "X XXXX XXX XXX X",
-            "X X  X X   X X X",
-            "X XXXX XXX XXX X",
-            "X    X     X   X",
-            "X XXXX X XXXX XX",
-            "X X    X X    XX",
-            "X XXXX XXX XXXXX",
-            "X    X     X   X",
-            "X XXXX X XXXXXX X",
-            "X              X",
-            "XXXXXXXXXXXXXXXX"
+            "XXXXXXXXXXXXXXXXXX",
+            "X      X         X",
+            "X XXXX XXXX XXXX X",
+            "X X  X X      X  X",
+            "X X XXXX XXXX XXXX",
+            "X X       X      X",
+            "X XXXX XXXX XX X X",
+            "X    X X    X  X X",
+            "X XXXX X XXXX XXXX",
+            "X    X X    X    X",
+            "X XXXX XXXX XXXX X",
+            "X                X",
+            "XXXXXXXXXXXXXXXXXX"
         ]
         self.dots = self.draw_dots()
 
@@ -39,4 +39,3 @@ class Maze:
 
             for dot in self.dots:
                 pygame.draw.rect(screen, (255, 255, 255), dot)
-
