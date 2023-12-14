@@ -4,7 +4,8 @@ import random
 class Ghost:
     def __init__(self, ghost_type, start_pos, maze):
         self.type = ghost_type
-        self.image = pygame.image.load('')
+        #load the appropriate icon based off ghost typoe
+        self.image = pygame.image.load(f'../icons/{self.type}.png')
         self.rect = self.image.get_rect(topleft=start_pos)
         self.maze = maze
         self.speed = 2
