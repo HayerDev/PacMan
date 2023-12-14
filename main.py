@@ -16,6 +16,7 @@ class Game:
                        Ghost('inky',  self.maze),
                        Ghost('clyde',  self.maze)
                       ]
+        self.score = 0
 
     def run(self):
         while self.running:
@@ -28,18 +29,27 @@ class Game:
             self.player.update(self.maze)
             self.player.draw(self.screen)
 
+            self.check_dot_collision()
+
             for ghost in self.ghosts:
                 ghost.update()
                 ghost.draw(self.screen)
                 if self.player.rect.colliderect(ghost.rect):
                     #print humiliating msg and exit game
-                    print("Ha, you lose!")
+                    print(f"Ha, you lose! Final Score: {self.score}")
                     self.running = False
 
             pygame.display.flip()
             self.clock.tick(60)
 
         pygame.quit()
+
+    def check_dot_collision(self):
+        for dot in self.maze.dots[:]:
+            if self.player.rect.colliderect(dot):
+                self.maze.dots.remove(dot)
+                self.score += 1
+
 
 if __name__ == "__main__":
     game = Game()
