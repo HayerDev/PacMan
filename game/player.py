@@ -2,7 +2,8 @@ import pygame
 class Player:
     def __init__(self):
         # Initialize player properties
-        self.image = pygame.image.load('../icons/Pacman.png')
+        self.original_image = pygame.image.load('./icons/Pacman.png')
+        self.image = pygame.transform.scale(self.original_image, (32, 32))
         self.rect = self.image.get_rect()
         self.speed = 3
         self.direction = pygame.Vector2(0, 0)

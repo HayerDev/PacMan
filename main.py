@@ -1,12 +1,12 @@
 import pygame
-from player import Player
-from ghost import Ghost
-from maze import Maze
+from game.player import Player
+from game.ghost import Ghost
+from game.maze import Maze
 
 class Game:
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode((1000, 800))  # Adjust as needed
+        self.screen = pygame.display.set_mode((800, 800))  # Adjust as needed
         self.clock = pygame.time.Clock()
         self.running = True
         self.maze = Maze()
